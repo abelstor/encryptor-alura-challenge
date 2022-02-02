@@ -10,6 +10,15 @@ encriptarButton.addEventListener('click', (e) => {
     const form = document.querySelector('#text-form');
     const text = form.input__texto.value;
 
+    for (let i = 0; i < text.length; i++) {
+        let e = text[i];
+        if (e !== e.toLowerCase()) {
+            alert('No se admiten letras mayúsculas. \nIntente nuevamente!');
+            document.getElementById('input__texto').value = '';
+            return;
+        }
+    }
+
     let finalText = '';
 
     for (let i = 0; i < text.length; i++) {
@@ -55,7 +64,8 @@ desencriptarButton.addEventListener('click', (e) => {
     let ro = /ober/gi;
     let ru = /ufat/gi;
 
-    let finalText = text.replace(ra, 'a').replace(re, 'e').replace(ri, 'i').replace(ro, 'o').replace(ru, 'u');
+    let finalText = text.replace(ra, 'a').replace(re, 'e')
+        .replace(ri, 'i').replace(ro, 'o').replace(ru, 'u');
 
     resultado.value = finalText;
     document.getElementById('input__texto').value = '';

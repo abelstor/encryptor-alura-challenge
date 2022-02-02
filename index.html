@@ -1,33 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Secret__Code</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1 class="titulo">código secreto</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secret__Code</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="frame-0">
+        <img class="img-logo" src="./assets/Vector.png" alt="logo" />
+        <h1 class="titulo">...:: Encriptador de texto ::...</h1>
+      </div>
+      <section class="form box">
+        <form id="text-form">
+          <div class="frame-01">
+            <label class="text-label" for="input-texto"
+              >Solo letras minúsculas, sin acento</label
+            >
+          </div>
+          <div class="frame-area">
+            <textarea
+              rows="3"
+              cols="20"
+              autocomplete="off"
+              class="text-input"
+              type="text"
+              name="input-texto"
+              id="input__texto"
+              placeholder="Ingrese el texto aqui"
+            ></textarea>
+          </div>
+          <div class="frame-03">
+            <input
+              class="btn btn-encriptar"
+              type="submit"
+              value="encriptar!"
+              id="btn-encriptar"
+            />
+            <input
+              class="btn btn-desencriptar"
+              type="submit"
+              value="desencriptar!"
+              id="btn-desencriptar"
+            />
+          </div>
+        </form>
+      </section>
 
-  <main class="main">
-    <section class="form box">
-      <form action=""
-            id="text-form">
-        <label for="input-texto">Solo letras minúsculas, sin acento</label>
-        <input class="text-input" type="text" name="input-texto" id="input__texto" placeholder="Ingrese el texto aqui">
-        <input class="btn" type="submit" value="encriptar!" id="btn-encriptar">
-        <input class="btn" type="submit" value="desencriptar!" id="btn-desencriptar">
-      </form>
-    </section>
-  
-    <section class="msg box">
-      <h2 id="">Mensaje encriptada:</h2>
-      <input class="text-input" type="text" id="msg"></input>
-      <input class="btn" type="submit" value="copiar" id="btn-copy">
-    </section>
-  </main>
+      <section class="msg__box">
+        <textarea class="text-copy" type="text" id="msg"></textarea>
+        <input
+          class="btn btn-copiar"
+          type="submit"
+          value="copiar"
+          id="btn-copy"
+        />
+      </section>
+    </main>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+
+    <footer class="frame-7"></footer>
+  </body>
 </html>
